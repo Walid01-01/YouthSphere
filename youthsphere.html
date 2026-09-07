@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="YouthSphere Initiative Association empowers young people through academic competitions, co-curricular education and skills development." />
+  <title>YouthSphere Initiative Association</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['DM Sans', 'sans-serif'], bangla: ['Hind Siliguri', 'sans-serif'] },
+          colors: { navy: '#0f172a', royal: '#1e3a8a', mint: '#b8f4d9', cyan: '#76e4f7' }
+        }
+      }
+    };
+  </script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root { --navy: #0f172a; --royal: #1e3a8a; --mint: #b8f4d9; --cyan: #76e4f7; --paper: #f7fafc; }
+    html { scroll-behavior: smooth; }
+    body { background: var(--paper); color: var(--navy); }
+    .hero-grid { background-image: linear-gradient(rgba(118,228,247,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(118,228,247,.07) 1px, transparent 1px); background-size: 58px 58px; }
+    .hero-glow { background: radial-gradient(circle at 50% 35%, rgba(118,228,247,.18), transparent 34%), radial-gradient(circle at 90% 5%, rgba(184,244,217,.14), transparent 25%); }
+    .eyebrow { letter-spacing: .16em; }
+    .cta-pulse { animation: pulse 2.5s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { box-shadow: 0 0 0 0 rgba(184,244,217,.26), 0 12px 38px rgba(118,228,247,.2); } 50% { box-shadow: 0 0 0 13px rgba(184,244,217,0), 0 16px 46px rgba(118,228,247,.36); } }
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity .7s ease, transform .7s ease; }
+    .reveal.is-visible { opacity: 1; transform: translateY(0); }
+    .photo-shift { transition: transform .6s ease; }
+    .photo-card:hover .photo-shift { transform: scale(1.05); }
+    .event-card { cursor: pointer; transition: transform .3s ease, background-color .3s ease, box-shadow .3s ease; }
+    .event-card:hover { transform: translateY(-5px); background-color: rgba(30,58,138,.55); box-shadow: 0 18px 42px rgba(0,0,0,.22); }
+    .event-options { animation: options-in .3s ease both; }
+    @keyframes options-in { from { opacity: 0; transform: translateX(12px); } to { opacity: 1; transform: translateX(0); } }
+    .results-gallery { animation: options-in .35s ease both; }
+    .event-option { transition: transform .25s ease, background-color .25s ease, border-color .25s ease; }
+    .event-option:hover { transform: translateY(-3px); }
+    .grain { position: relative; }
+    .grain::after { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: .035; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E"); }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+  </style>
+</head>
+<body class="font-sans antialiased">
+  <header class="absolute inset-x-0 top-0 z-20 border-b border-white/10 text-white">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
+      <a href="#home" class="flex items-center gap-3" aria-label="YouthSphere home">
+        <span class="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-full bg-white ring-2 ring-white/20"><img src="Screenshot 2026-09-07 124441.png" alt="YouthSphere Initiative Association logo" class="h-full w-full object-contain" /></span>
+        <span class="max-w-[190px] text-sm font-bold leading-tight tracking-tight sm:max-w-none sm:text-base">YouthSphere<br class="sm:hidden" /> Initiative Association</span>
+      </a>
+      <nav class="hidden items-center gap-8 text-sm text-slate-300 md:flex" aria-label="Primary navigation">
+        <a class="transition hover:text-white" href="#about">About Us</a>
+        <a class="transition hover:text-white" href="#initiatives">Our Initiatives</a>
+        <a class="transition hover:text-white" href="#impact">Past Events</a>
+        <a class="transition hover:text-white" href="#contact">Contact</a>
+      </nav>
+      <a href="#contact" class="text-xs font-semibold uppercase tracking-[.16em] text-cyan md:hidden">Connect</a>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="grain hero-grid hero-glow relative overflow-hidden bg-navy text-white">
+      <div class="mx-auto grid min-h-[760px] max-w-7xl items-center gap-14 px-6 pb-20 pt-36 lg:grid-cols-[1.08fr_.92fr] lg:px-8 lg:pb-24 lg:pt-40">
+        <div class="relative z-10 reveal">
+          <p class="eyebrow mb-7 text-xs font-bold uppercase text-cyan">Learn boldly / lead kindly</p>
+          <h1 class="max-w-3xl text-5xl font-bold leading-[.98] tracking-[-.05em] sm:text-7xl lg:text-[88px]">Make room for<br /><span class="text-cyan">what's possible.</span></h1>
+          <p class="mt-8 max-w-xl font-bangla text-2xl font-medium leading-relaxed text-mint sm:text-3xl">তরুণদের স্বপ্নকে বাস্তবে রূপ দিতে আমরা প্রতিশ্রুতিবদ্ধ।</p>
+          <p class="mt-6 max-w-lg text-base leading-8 text-slate-300">Empowering students and youth through national online and offline educational competitions, quizzes, and skill development platforms.</p>
+          <a href="#contact" class="cta-pulse mt-10 inline-flex items-center gap-3 rounded-full bg-mint px-7 py-4 text-sm font-bold text-navy transition hover:-translate-y-1 hover:bg-white">পরবর্তী ইভেন্টের আপডেট দেখুন <i data-lucide="arrow-down" class="h-5 w-5"></i></a>
+          <div class="mt-12 flex items-center gap-5 text-xs text-slate-400"><span class="h-px w-12 bg-cyan"></span><span>Building curious minds since 2018</span></div>
+        </div>
+        <div class="relative reveal lg:mt-10" style="transition-delay: 140ms">
+          <div class="absolute -inset-5 rounded-[2rem] border border-cyan/20"></div>
+          <div class="relative overflow-hidden rounded-[1.6rem] bg-royal shadow-2xl shadow-cyan/10">
+            <img class="h-[390px] w-full object-cover opacity-90 sm:h-[490px]" src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=85" alt="Students collaborating in a bright classroom" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy via-transparent to-transparent"></div>
+            <div class="absolute bottom-0 left-0 right-0 p-7 sm:p-9"><p class="eyebrow text-[10px] font-bold uppercase text-cyan">The next generation</p><p class="mt-3 max-w-sm text-2xl font-semibold leading-tight">Every question is a door. We help young people open it.</p></div>
+          </div>
+          <div class="absolute -bottom-7 -left-6 flex max-w-[210px] items-center gap-3 rounded-2xl border border-slate-200/10 bg-white px-4 py-3 text-navy shadow-xl sm:-left-10"><span class="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-mint"><i data-lucide="users-round" class="h-5 w-5"></i></span><span class="text-xs font-bold leading-5">A community of<br /><span class="font-normal text-slate-500">future-ready learners</span></span></div>
+        </div>
+      </div>
+      <div class="absolute bottom-0 left-1/2 hidden -translate-x-1/2 items-center gap-3 pb-7 text-[10px] font-bold uppercase tracking-[.2em] text-slate-500 lg:flex"><span class="h-px w-10 bg-slate-600"></span> Scroll to explore <i data-lucide="chevron-down" class="h-4 w-4"></i></div>
+    </section>
+
+    <section class="border-b border-slate-200 bg-white" aria-label="Event updates">
+      <div class="mx-auto grid max-w-7xl gap-8 px-6 py-10 lg:grid-cols-[.9fr_1.5fr] lg:items-center lg:px-8">
+        <div><p class="eyebrow text-[10px] font-bold uppercase text-royal">Event updates</p><h2 class="mt-2 text-2xl font-bold tracking-tight sm:text-3xl">No event is currently <span class="text-royal">running</span></h2></div>
+        <div class="border-t border-slate-200 pt-6 text-sm leading-7 text-slate-500 sm:border-l sm:border-t-0 sm:pl-8 sm:pt-0">We are preparing the next YouthSphere experience. Details about our upcoming quiz, competition, or workshop will be announced here.</div>
+      </div>
+    </section>
+
+    <section id="initiatives" class="mx-auto max-w-7xl px-6 py-24 lg:px-8 lg:py-32">
+      <div class="reveal flex flex-col justify-between gap-6 md:flex-row md:items-end"><div><p class="eyebrow text-[10px] font-bold uppercase text-royal">What we do</p><h2 class="mt-4 max-w-xl text-4xl font-bold leading-tight tracking-[-.04em] sm:text-5xl">A wider classroom for a wider future.</h2></div><p class="max-w-sm text-sm leading-7 text-slate-500">We create meaningful stages for young people to test ideas, build confidence and find their people.</p></div>
+      <div class="mt-14 grid gap-px overflow-hidden rounded-3xl bg-slate-200 md:grid-cols-3">
+        <article class="reveal bg-white p-8 transition hover:bg-slate-50 sm:p-10"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-blue-50 text-royal"><i data-lucide="brain-circuit" class="h-6 w-6"></i></span><p class="mt-12 text-xs font-bold uppercase tracking-[.14em] text-slate-400">01 / Explore</p><h3 class="mt-4 text-2xl font-bold">Educational Quizzes & Olympiads</h3><p class="mt-4 text-sm leading-7 text-slate-500">National platforms that make learning feel like discovery, from science and math to language and general knowledge.</p></article>
+        <article class="reveal bg-white p-8 transition hover:bg-slate-50 sm:p-10" style="transition-delay: 100ms"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-emerald-50 text-emerald-700"><i data-lucide="trophy" class="h-6 w-6"></i></span><p class="mt-12 text-xs font-bold uppercase tracking-[.14em] text-slate-400">02 / Belong</p><h3 class="mt-4 text-2xl font-bold">Offline Competitions & Workshops</h3><p class="mt-4 text-sm leading-7 text-slate-500">Hands-on gatherings where collaboration, healthy competition and mentorship turn ambition into momentum.</p></article>
+        <article class="reveal bg-white p-8 transition hover:bg-slate-50 sm:p-10" style="transition-delay: 200ms"><span class="grid h-12 w-12 place-items-center rounded-2xl bg-cyan/30 text-slate-800"><i data-lucide="compass" class="h-6 w-6"></i></span><p class="mt-12 text-xs font-bold uppercase tracking-[.14em] text-slate-400">03 / Grow</p><h3 class="mt-4 text-2xl font-bold">Skill Development & Mentorship</h3><p class="mt-4 text-sm leading-7 text-slate-500">Practical sessions and generous guidance for communication, leadership, creativity and future-ready skills.</p></article>
+      </div>
+    </section>
+
+    <section id="impact" class="grain bg-navy py-24 text-white lg:py-32">
+      <div class="mx-auto max-w-7xl px-6 lg:px-8"><div class="reveal flex flex-col justify-between gap-8 md:flex-row md:items-end"><div><h2 class="mt-4 max-w-xl text-4xl font-bold leading-tight tracking-[-.04em] sm:text-5xl">Small moments.<br /><span class="text-mint">Lasting impact.</span></h2></div><p class="max-w-sm text-sm leading-7 text-slate-400">A growing movement of learners, educators and volunteers making space for one another to shine.</p></div>
+        <div class="mt-16 grid gap-y-10 border-y border-white/10 py-10 sm:grid-cols-3 sm:gap-8"><div><p class="text-5xl font-bold tracking-tight text-cyan"><span class="counter" data-target="100">0</span><span>+</span></p><p class="mt-2 text-sm text-slate-400">Youth impacted</p></div><div><p class="text-5xl font-bold tracking-tight text-mint"><span class="counter" data-target="1">0</span></p><p class="mt-2 text-sm text-slate-400">Event organized</p></div><div><p class="text-5xl font-bold tracking-tight text-white"><span class="counter" data-target="64">0</span></p><p class="mt-2 text-sm text-slate-400">Districts reached</p></div></div>
+        <div class="mt-14 grid items-start gap-5 lg:grid-cols-[minmax(0,420px)_minmax(0,1fr)]"><article class="event-card photo-card reveal overflow-hidden rounded-2xl bg-white/5 outline-none focus-visible:ring-2 focus-visible:ring-cyan focus-visible:ring-offset-4 focus-visible:ring-offset-navy" tabindex="0" role="button" aria-expanded="false" aria-controls="mindsphere-options"><div class="h-52 overflow-hidden"><img class="photo-shift h-full w-full object-cover" src="https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&w=900&q=80" alt="Students learning together" /></div><div class="p-6"><p class="text-xs font-bold uppercase tracking-[.14em] text-cyan">August / 2026 · View highlights</p><h3 class="mt-3 text-xl font-semibold">MindSphere Quiz Challenge</h3><p class="mt-2 text-sm leading-6 text-slate-400">Our previous quiz challenge brought young minds together through curiosity and healthy competition.</p><p class="mt-5 flex items-center gap-2 text-xs font-bold uppercase tracking-[.12em] text-cyan">Open event options <i data-lucide="arrow-right" class="h-4 w-4"></i></p></div></article>
+          <aside id="mindsphere-options" class="event-options hidden rounded-2xl bg-white p-6 text-navy shadow-xl shadow-black/10 sm:p-7" aria-label="MindSphere Quiz Challenge options"><div class="flex items-start justify-between gap-4"><div><p class="eyebrow text-[10px] font-bold uppercase text-royal">Event highlights</p><h3 class="mt-2 text-2xl font-bold tracking-tight">Choose an option</h3></div><button type="button" data-options-close aria-label="Close event options" class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-slate-100 text-slate-500 transition hover:bg-slate-200 hover:text-navy"><i data-lucide="x" class="h-4 w-4"></i></button></div><div class="mt-6 grid gap-3"><a href="#quiz-result" data-result-option class="event-option group rounded-xl border border-blue-100 bg-blue-50/70 p-4 hover:border-blue-300 hover:bg-blue-50"><span class="flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-lg bg-white text-royal shadow-sm"><i data-lucide="bar-chart-3" class="h-5 w-5"></i></span><span><span class="block font-bold">Quiz Result</span><span class="mt-1 block text-xs text-slate-500">View final results and participants.</span></span><i data-lucide="arrow-up-right" class="ml-auto h-4 w-4 text-royal transition group-hover:translate-x-1 group-hover:-translate-y-1"></i></span></a><a href="#campus-ambassador-award-2026" data-award-option class="event-option group rounded-xl border border-emerald-100 bg-emerald-50/70 p-4 hover:border-emerald-300 hover:bg-emerald-50"><span class="flex items-center gap-3"><span class="grid h-10 w-10 place-items-center rounded-lg bg-white text-emerald-700 shadow-sm"><i data-lucide="award" class="h-5 w-5"></i></span><span><span class="block font-bold">Best Campus Ambassador Award 2026</span><span class="mt-1 block text-xs text-slate-500">View the recognized campus leaders.</span></span><i data-lucide="arrow-up-right" class="ml-auto h-4 w-4 text-emerald-700 transition group-hover:translate-x-1 group-hover:-translate-y-1"></i></span></a></div></aside></div>
+        <div id="quiz-result-gallery" class="results-gallery mt-8 hidden"><div class="mb-5 flex items-end justify-between gap-4"><div><p class="eyebrow text-[10px] font-bold uppercase text-cyan">MindSphere Quiz Challenge · August 2026</p><h3 class="mt-2 text-2xl font-bold text-white">Quiz winners</h3></div><span class="text-xs text-slate-400">Science · Sports · General Knowledge</span></div><div class="grid gap-5 md:grid-cols-3"><img class="w-full rounded-2xl shadow-xl" src="../source/result/787205587_122192203550854461_547692662161039668_n.jpg" alt="MindSphere Science Quiz winners" /><img class="w-full rounded-2xl shadow-xl" src="../source/result/787342193_122192203460854461_8948072668998790134_n.jpg" alt="MindSphere Sports Quiz winners" /><img class="w-full rounded-2xl shadow-xl" src="../source/result/787652673_122192203502854461_4893741417489767084_n.jpg" alt="MindSphere General Knowledge Quiz winners" /></div></div>
+        <div id="award-gallery" class="results-gallery mt-8 hidden"><div class="mb-5 flex items-end justify-between gap-4"><div><p class="eyebrow text-[10px] font-bold uppercase text-emerald-300">MindSphere Quiz Challenge · 2026</p><h3 class="mt-2 text-2xl font-bold text-white">Best Campus Ambassador Award</h3></div><span class="text-xs text-slate-400">Recognized campus leaders</span></div><div class="grid gap-5 md:grid-cols-3"><img class="w-full rounded-2xl shadow-xl" src="../source/award/784617482_122192082734854461_689977465806642322_n.jpg" alt="Best Campus Ambassador Award recipient Synthia Afrin Trina" /><img class="w-full rounded-2xl shadow-xl" src="../source/award/784617507_122192082692854461_3162793544572081100_n.jpg" alt="Best Campus Ambassador Award recipient Annana Tripura" /><img class="w-full rounded-2xl shadow-xl" src="../source/award/785993207_122192082644854461_2027312969955296848_n.jpg" alt="Best Campus Ambassador Award recipient Swarna Rani Sarkar" /></div></div>
+      </div>
+    </section>
+
+    <section id="about" class="mx-auto grid max-w-7xl gap-14 px-6 py-24 lg:grid-cols-[.8fr_1.2fr] lg:items-center lg:px-8 lg:py-32">
+      <div class="reveal"><p class="eyebrow text-[10px] font-bold uppercase text-royal">About YouthSphere</p><h2 class="mt-4 text-4xl font-bold leading-tight tracking-[-.04em] sm:text-5xl">Education is more powerful when it feels <span class="text-royal">personal.</span></h2></div>
+      <div class="reveal border-l-2 border-mint pl-7 sm:pl-10" style="transition-delay: 120ms"><p class="text-xl font-medium leading-9 text-slate-700">YouthSphere Initiative Association is a community-led educational organization helping young people move toward academic and co-curricular excellence with confidence.</p><p class="mt-7 text-sm leading-8 text-slate-500">We believe every learner deserves a stage, a thoughtful challenge and a circle that sees their potential. Through accessible competitions, workshops and mentorship, we connect youth with the knowledge, skills and support they need to shape their own next chapter.</p><div class="mt-9 flex items-center gap-3 text-sm font-semibold text-royal"><span class="grid h-9 w-9 place-items-center rounded-full bg-blue-50"><i data-lucide="heart-handshake" class="h-4 w-4"></i></span> Learn. Lead. Lift others.</div></div>
+    </section>
+
+    <section id="contact" class="bg-mint/60">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1fr_1.2fr] lg:items-end lg:px-8 lg:py-24"><div><p class="eyebrow text-[10px] font-bold uppercase text-royal">Stay in the loop</p><h2 class="mt-4 text-4xl font-bold leading-tight tracking-[-.04em] sm:text-5xl">The next chapter<br />starts with you.</h2></div><div class="grid gap-8 border-t border-navy/15 pt-8 text-sm sm:grid-cols-2 lg:grid-cols-4 lg:border-l lg:border-t-0 lg:pl-10 lg:pt-0"><div><p class="text-xs font-bold uppercase tracking-[.14em] text-slate-600">Official Gmail</p><p class="mt-2 break-all text-sm font-bold text-navy">youthsphere.official.ass@gmail.com</p></div><div><p class="text-xs font-bold uppercase tracking-[.14em] text-slate-500">Our location</p><p class="mt-2 font-semibold">Dhaka, Bangladesh</p></div><div class="min-w-0"><p class="text-xs font-bold uppercase tracking-[.14em] text-blue-700">Facebook</p><a href="https://facebook.com/youthsphereinitiativeassociation" target="_blank" rel="noreferrer" class="mt-2 block break-all font-semibold text-navy underline decoration-blue-700/40 underline-offset-4 transition hover:text-blue-700">@youthsphereinitiativeassociation</a></div><div class="min-w-0"><p class="text-xs font-bold uppercase tracking-[.14em] text-emerald-700">WhatsApp</p><p class="mt-2 font-semibold text-slate-500">WhatsApp number coming soon</p></div></div></div>
+    </section>
+  </main>
+
+  <footer class="bg-navy text-slate-400"><div class="mx-auto flex max-w-7xl flex-col gap-5 px-6 py-8 text-xs sm:flex-row sm:items-center sm:justify-between lg:px-8"><p>© 2026 IT Department of YSIA. All rights reserved.</p><p class="text-sm font-semibold text-white">Official Gmail: <span class="text-cyan">youthsphere.official.ass@gmail.com</span></p><p class="text-slate-500">For every curious mind, everywhere.</p></div></footer>
+
+  <script>
+    lucide.createIcons();
+    const observer = new IntersectionObserver((entries) => entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('is-visible'); }), { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach((element) => observer.observe(element));
+    const counters = document.querySelectorAll('.counter');
+    const counterObserver = new IntersectionObserver((entries, observerInstance) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        const element = entry.target;
+        const target = Number(element.dataset.target);
+        const duration = 1300;
+        const start = performance.now();
+        const tick = (now) => { const progress = Math.min((now - start) / duration, 1); element.textContent = Math.floor(progress * target).toLocaleString(); if (progress < 1) requestAnimationFrame(tick); };
+        requestAnimationFrame(tick);
+        observerInstance.unobserve(element);
+      });
+    }, { threshold: 0.7 });
+    counters.forEach((counter) => counterObserver.observe(counter));
+    const eventCard = document.querySelector('.event-card');
+    const eventOptions = document.querySelector('#mindsphere-options');
+    const resultOption = document.querySelector('[data-result-option]');
+    const resultGallery = document.querySelector('#quiz-result-gallery');
+    const awardOption = document.querySelector('[data-award-option]');
+    const awardGallery = document.querySelector('#award-gallery');
+    const toggleEventOptions = (shouldOpen) => { eventOptions.classList.toggle('hidden', !shouldOpen); eventCard.setAttribute('aria-expanded', String(shouldOpen)); };
+    eventCard.addEventListener('click', () => toggleEventOptions(eventOptions.classList.contains('hidden')));
+    eventCard.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleEventOptions(eventOptions.classList.contains('hidden')); } });
+    eventOptions.querySelector('[data-options-close]').addEventListener('click', () => toggleEventOptions(false));
+    resultOption.addEventListener('click', (event) => { event.preventDefault(); resultGallery.classList.remove('hidden'); resultGallery.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    awardOption.addEventListener('click', (event) => { event.preventDefault(); awardGallery.classList.remove('hidden'); awardGallery.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+  </script>
+</body>
+</html>
