@@ -49,7 +49,7 @@
   <header class="absolute inset-x-0 top-0 z-20 border-b border-white/10 text-white">
     <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-5 lg:px-8">
       <a href="#home" class="flex items-center gap-3" aria-label="YouthSphere home">
-        <span class="grid h-11 w-11 shrink-0 place-items-center overflow-hidden rounded-full bg-white ring-2 ring-white/20"><img src="Screenshot 2026-09-07 124441.png" alt="YouthSphere Initiative Association logo" class="h-full w-full object-contain" /></span>
+        <span class="grid h-11 w-11 shrink-0 place-items-center rounded-full bg-white text-lg font-black text-navy ring-2 ring-white/20">YS</span>
         <span class="max-w-[190px] text-sm font-bold leading-tight tracking-tight sm:max-w-none sm:text-base">YouthSphere<br class="sm:hidden" /> Initiative Association</span>
       </a>
       <nav class="hidden items-center gap-8 text-sm text-slate-300 md:flex" aria-label="Primary navigation">
@@ -67,7 +67,7 @@
       <div class="mx-auto grid min-h-[760px] max-w-7xl items-center gap-14 px-6 pb-20 pt-36 lg:grid-cols-[1.08fr_.92fr] lg:px-8 lg:pb-24 lg:pt-40">
         <div class="relative z-10 reveal">
           <p class="eyebrow mb-7 text-xs font-bold uppercase text-cyan">Learn boldly / lead kindly</p>
-          <h1 class="max-w-3xl text-5xl font-bold leading-[.98] tracking-[-.05em] sm:text-7xl lg:text-[88px]">Make room for<br /><span class="text-cyan">what's possible.</span></h1>
+          <h1 class="max-w-3xl text-5xl font-bold leading-[.98] tracking-[-.05em] sm:text-7xl lg:text-[88px]">YouthSphere<br /><span class="text-cyan">Initiative Association</span></h1>
           <p class="mt-8 max-w-xl font-bangla text-2xl font-medium leading-relaxed text-mint sm:text-3xl">তরুণদের স্বপ্নকে বাস্তবে রূপ দিতে আমরা প্রতিশ্রুতিবদ্ধ।</p>
           <p class="mt-6 max-w-lg text-base leading-8 text-slate-300">Empowering students and youth through national online and offline educational competitions, quizzes, and skill development platforms.</p>
           <a href="#contact" class="cta-pulse mt-10 inline-flex items-center gap-3 rounded-full bg-mint px-7 py-4 text-sm font-bold text-navy transition hover:-translate-y-1 hover:bg-white">পরবর্তী ইভেন্টের আপডেট দেখুন <i data-lucide="arrow-down" class="h-5 w-5"></i></a>
@@ -152,8 +152,14 @@
     eventCard.addEventListener('click', () => toggleEventOptions(eventOptions.classList.contains('hidden')));
     eventCard.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); toggleEventOptions(eventOptions.classList.contains('hidden')); } });
     eventOptions.querySelector('[data-options-close]').addEventListener('click', () => toggleEventOptions(false));
-    resultOption.addEventListener('click', (event) => { event.preventDefault(); resultGallery.classList.remove('hidden'); resultGallery.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
-    awardOption.addEventListener('click', (event) => { event.preventDefault(); awardGallery.classList.remove('hidden'); awardGallery.scrollIntoView({ behavior: 'smooth', block: 'start' }); });
+    resultOption.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.open('https://facebook.com/youthsphereinitiativeassociation/posts/pfbid0QMAVjW3avwW7RcNWFZ74TCmkx4hhUWaHex4tztwsVBMoF2Z37FEstFPQhdPFvhgjl', '_blank', 'noopener,noreferrer');
+    });
+    awardOption.addEventListener('click', (event) => {
+      event.preventDefault();
+      window.open('https://facebook.com/youthsphereinitiativeassociation/posts/pfbid0QMAVjW3avwW7RcNWFZ74TCmkx4hhUWaHex4tztwsVBMoF2Z37FEstFPQhdPFvhgjl', '_blank', 'noopener,noreferrer');
+    });
   </script>
 </body>
 </html>
